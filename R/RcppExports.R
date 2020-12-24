@@ -121,6 +121,10 @@ cvmat_face <- function(ptr, facedata, eyedata) {
     .Call('_opencv_cvmat_face', PACKAGE = 'opencv', ptr, facedata, eyedata)
 }
 
+cvmat_eyemask <- function(ptr, facedata, eyedata) {
+    .Call('_opencv_cvmat_eyemask', PACKAGE = 'opencv', ptr, facedata, eyedata)
+}
+
 cvmat_facemask <- function(ptr, facedata) {
     .Call('_opencv_cvmat_facemask', PACKAGE = 'opencv', ptr, facedata)
 }

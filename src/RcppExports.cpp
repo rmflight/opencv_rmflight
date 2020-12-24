@@ -351,6 +351,19 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// cvmat_eyemask
+XPtrMat cvmat_eyemask(XPtrMat ptr, const char * facedata, const char * eyedata);
+RcppExport SEXP _opencv_cvmat_eyemask(SEXP ptrSEXP, SEXP facedataSEXP, SEXP eyedataSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< XPtrMat >::type ptr(ptrSEXP);
+    Rcpp::traits::input_parameter< const char * >::type facedata(facedataSEXP);
+    Rcpp::traits::input_parameter< const char * >::type eyedata(eyedataSEXP);
+    rcpp_result_gen = Rcpp::wrap(cvmat_eyemask(ptr, facedata, eyedata));
+    return rcpp_result_gen;
+END_RCPP
+}
 // cvmat_facemask
 XPtrMat cvmat_facemask(XPtrMat ptr, const char * facedata);
 RcppExport SEXP _opencv_cvmat_facemask(SEXP ptrSEXP, SEXP facedataSEXP) {
@@ -490,6 +503,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_opencv_enums_types", (DL_FUNC) &_opencv_enums_types, 1},
     {"_opencv_enums_depth", (DL_FUNC) &_opencv_enums_depth, 0},
     {"_opencv_cvmat_face", (DL_FUNC) &_opencv_cvmat_face, 3},
+    {"_opencv_cvmat_eyemask", (DL_FUNC) &_opencv_cvmat_eyemask, 3},
     {"_opencv_cvmat_facemask", (DL_FUNC) &_opencv_cvmat_facemask, 2},
     {"_opencv_cvmat_mog2", (DL_FUNC) &_opencv_cvmat_mog2, 1},
     {"_opencv_cvmat_knn", (DL_FUNC) &_opencv_cvmat_knn, 1},

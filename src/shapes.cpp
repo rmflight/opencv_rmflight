@@ -96,7 +96,7 @@ XPtrMat cvmat_rectangles(XPtrMat ptr){
   //Rprintf("Number of rectangles: %i\n", nRectangle);
   //Rprintf("Rectangle 1 has %i points\n", rectangles[0].size());
   //Rprintf("Rectangle 2 has %i points\n", rectangles[1].size());
-  Rcpp::List squareList(nRectangle);
+  Rcpp::List rectangleList(nRectangle);
   for (int i = 0; i < nRectangle; i++) {
     int nPoint = rectangles[i].size();
     Rcpp::NumericVector x(nPoint);

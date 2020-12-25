@@ -157,6 +157,10 @@ cvmat_markers <- function(ptr) {
     .Call('_opencv_cvmat_markers', PACKAGE = 'opencv', ptr)
 }
 
+cvmat_rectangles <- function(ptr) {
+    .Call('_opencv_cvmat_rectangles', PACKAGE = 'opencv', ptr)
+}
+
 cvversion <- function() {
     .Call('_opencv_cvversion', PACKAGE = 'opencv')
 }

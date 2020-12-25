@@ -461,6 +461,17 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// cvmat_rectangles
+XPtrMat cvmat_rectangles(XPtrMat ptr);
+RcppExport SEXP _opencv_cvmat_rectangles(SEXP ptrSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< XPtrMat >::type ptr(ptrSEXP);
+    rcpp_result_gen = Rcpp::wrap(cvmat_rectangles(ptr));
+    return rcpp_result_gen;
+END_RCPP
+}
 // cvversion
 std::string cvversion();
 RcppExport SEXP _opencv_cvversion() {
@@ -512,6 +523,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_opencv_cvkeypoints_harris", (DL_FUNC) &_opencv_cvkeypoints_harris, 6},
     {"_opencv_cvmat_hog", (DL_FUNC) &_opencv_cvmat_hog, 1},
     {"_opencv_cvmat_markers", (DL_FUNC) &_opencv_cvmat_markers, 1},
+    {"_opencv_cvmat_rectangles", (DL_FUNC) &_opencv_cvmat_rectangles, 1},
     {"_opencv_cvversion", (DL_FUNC) &_opencv_cvversion, 0},
     {NULL, NULL, 0}
 };
